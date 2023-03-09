@@ -3,7 +3,7 @@ padding-left: 100px;
 padding-right: 70px;
 }
 
-ul {
+.listaNavbar {
   list-style-type: none;
   margin: 0;
   padding-left: 120px;
@@ -33,7 +33,7 @@ li a:hover {
 
 
 .liAbout{
-  background-color: #04AA6D;
+  background-color:rgb(44, 150, 127);
   float: right;
   margin-right: 100px;
   
@@ -44,23 +44,37 @@ img{
   width: 180px;
 }
  
-.carrito{
-  height: 50px;
-  width: 60px;
-  position: fixed;
+.carritoAnimacion{
+  margin-top: 3px;
+  height: 45px;
+  width: 40px;
+  position:fixed;
   margin-left: 20px;
+  border-style:inset;
+  border-color: rgb(248, 6, 6);
+  border-radius: 50%;
   
 }
 
 .notifCarrito{
   margin-top: 32px;
-  margin-left: 70px;
-  position: fixed;
+  margin-left: 50px;
+  position:fixed;
+  border-radius: 20px;
+  border-style:double;
+  background-color: rgb(243, 4, 4);
   
 }
 
+@font-face {
+  font-family: 'Tecno';
+  src: url(../public/fuentes/TechnoLogic.ttf);
+}
 .saludo{
-  color:black;
+  font-family: 'Tecno';
+  font-size: 60px;
+  color:rgb(17, 70, 58);
+  margin-bottom: -50px;
   margin-left: 100px;
 }
 @keyframes App-logo-spin {

@@ -7,9 +7,9 @@ function Navbar(){
    
    <nav className="navbar">
    <Cartwidget imagen="img/carrito2.png" alt="carro"></Cartwidget>
-        <ul>
+        <ul className="listaNavbar">
        <li><a href="#home">Home</a></li>
-       <li><a href="#news">Noticias</a></li>
+       <li><a href="#news">Categorías</a></li>
        <li><a href="#contact">Contact</a></li>
        <li><a href="">Búsqueda de artículos
        <input type="search" placeholder="Marca, modelo..."/>

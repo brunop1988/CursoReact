@@ -2,10 +2,12 @@ import React from "react"
 
 function Cartwidget(props){
     return ( 
-    <span className="carrito">
-      <img className="carrito" src={props.imagen} alt={props.alt}/>
-      <strong className="notifCarrito">3</strong>
-    </span>
+    <div className="carrito">
+      <img className="carritoAnimacion" src={props.imagen} alt={props.alt}/>
+      <button className="notifCarrito">
+  <span>4</span>
+</button>
+    </div>
     )
 
 }

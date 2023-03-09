@@ -2,7 +2,7 @@ import React from "react"
 function Greeting(props){
 
         return(
-            <p className="saludo">{props.greeting}</p>
+            <h1 className="saludo">{props.greeting}</h1>
             )
     }
 
