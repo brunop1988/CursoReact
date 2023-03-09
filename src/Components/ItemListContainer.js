@@ -5,5 +5,5 @@ function Greeting(props){
             <h1 className="saludo">{props.greeting}</h1>
             )
     }
-
-    export default Greeting
+    
+export default Greeting

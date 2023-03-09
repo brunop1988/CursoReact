@@ -8,10 +8,18 @@ padding-right: 70px;
   margin: 0;
   padding-left: 120px;
   overflow:hidden;
-
+  
   background-color: #333;
 }
 
+.botonBusqueda{
+  margin-top:15px;
+  margin-left: 30px;
+  border: none;
+  background-color: #333;
+  font-size: 16px;
+  color:white;}
+  
 li {
   display: block;
   float: left;
