@@ -1,16 +1,17 @@
  import './NavBar.css'
   import './Productos.css'
   import Navbar from '../src/Components/NavBar.js'
-  import Gretting from './Components/ItemListContainer.js'
-  import Productos from './Components/Productos.js'
-  
+  import Productos from './Components/Productos.js'  
+import ItemListContainer from './Components/ItemListContainer.js'
+
  
 function App() {
   return (
     <div className="App">
 
       <Navbar/>
-      <Gretting greeting="TuTecnoStore"/>
+
+      <ItemListContainer><>TuTecnoStore</></ItemListContainer>
       <Productos clase="producto1" imagen="img/laptop1.png" alt="laptop1" nombre="Laptop hp i7 8gb" />
       <Productos clase="producto2" imagen="img/ipad.png" alt="ipad" nombre="iPad 10.2 pulgadas 64gb"/>
       <Productos clase="producto3" imagen="img/asus.png" alt="asus" nombre="Tablet Asus Vivobook"/>

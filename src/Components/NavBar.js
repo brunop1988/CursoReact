@@ -6,7 +6,7 @@ function Navbar(){
 <div>
    
    <nav className="navbar">
-   <Cartwidget imagen="img/carrito2.png" alt="carro"></Cartwidget>
+   <Cartwidget imagen="img/carrito2.png" alt="carro" />
         <ul className="listaNavbar">
        <li><a href="#home">Home</a></li>
        <li><a href="#news">Categorías</a></li>

@@ -11,15 +11,7 @@ function Productos(props){
             <li>
                 {props.nombre}
             </li>
-            
-            <li className="p2">
-                {props.nombre2}</li> 
-            <li className="p3">
-                {props.nombre3}
-            </li>
-            <li className="p4">
-                {props.nombre4}
-            </li>
+         
         </ul>
                        
     </div> 

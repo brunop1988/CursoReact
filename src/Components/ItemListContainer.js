@@ -1,9 +1,8 @@
 import React from "react"
-function Greeting(props){
-
+function ItemListContainer({children}){
         return(
-            <h1 className="saludo">{props.greeting}</h1>
+            <h2 className="saludo">{children}</h2>
             )
     }
     
-export default Greeting
+export default ItemListContainer
