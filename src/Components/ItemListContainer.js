@@ -1,7 +1,7 @@
 import React from "react"
 function ItemListContainer({children}){
         return(
-            <h2 className="saludo">{children}</h2>
+            <h1 className="saludo">{children}</h1>
             )
     }
     
