@@ -1,7 +1,7 @@
 import React from "react"
-function ItemListContainer(){
+function ItemListContainer(props){
         return(
-            <h1 className="saludo">TuTecnoStore</h1>
+            <h1 className="saludo">{props.greeting}</h1>
             )
     }
     

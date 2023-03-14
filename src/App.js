@@ -11,7 +11,7 @@ function App() {
 
       <Navbar/>
 
-      <ItemListContainer />
+      <ItemListContainer greeting="TuTecnoStore" />
       <Productos clase="producto1" imagen="img/laptop1.png" alt="laptop1" nombre="Laptop hp i7 8gb" stock="2" />
       <Productos clase="producto2" imagen="img/ipad.png" alt="ipad" nombre="iPad 10.2 pulgadas 64gb" stock="2"/>
       <Productos clase="producto3" imagen="img/asus.png" alt="asus" nombre="Tablet Asus Vivobook" stock="2"/>
