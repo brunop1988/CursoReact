@@ -1,0 +1,63 @@
+[
+{
+    "id": 1,
+    "class": "producto1",
+    "name": "Laptop hp i7 8gb",
+    "description": "Windows 10 Home 7th Gen Intel® Core i7 processor; 17.3 display; 8GB memory; 1TB hard drive; webcam not included; HDMI output",
+    "alt": "laphp",
+    "image": "img/laptop1.png",
+    "stock": 2,
+    "category": "laptop"
+},
+
+{
+    "id": 2,
+    "class": "producto2",
+    "name": "iPad 10.2 pulgadas 64gb",
+    "alt": "ipad",
+    "image": "img/ipad.png",
+    "stock": 2,
+    "category": "tablet"
+},
+
+{
+    "id": 3,
+    "class": "producto3",
+    "name": "Tablet Asus Vivobook",
+    "alt": "asuvb",
+    "image": "img/asus.png",
+    "stock": 4,
+    "category": "tablet"
+},
+
+{
+    "id": 4,
+    "class": "producto1",
+    "name": "Laptop hp i7 8gb",
+    "alt": "laphp",
+    "image": "img/laptop1.png",
+    "stock": 2,
+    "category": "laptop"
+},
+
+{
+    "id": 5,
+    "class": "producto2",
+    "name": "iPad 10.2 pulgadas 64gb",
+    "alt": "ipad",
+    "image": "img/ipad.png",
+    "stock": 2,
+    "category": "tablet"
+},
+
+{
+    "id": 6,
+    "class": "producto3",
+    "name": "Tablet Asus Vivobook",
+    "alt": "asuvb",
+    "image": "img/asus.png",
+    "stock": 4,
+    "category": "tablet"
+}
+
+]

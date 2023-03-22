@@ -1,24 +1,27 @@
  import './NavBar.css'
   import './Productos.css'
   import Navbar from '../src/Components/NavBar.js'
-  import Productos from './Components/Productos.js'  
 import ItemListContainer from './Components/ItemListContainer.js'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Error404 from './Components/Error404.js';
+import ItemDetailContainer from './Components/ItemDetailContainer.js'
 
  
 function App() {
   return (
     <div className="App">
 
-      <Navbar/>
+<BrowserRouter>
+    <Navbar/>
+  <Routes>
+      <Route path="/" exact element={<ItemListContainer greeting="TuTecnoStore"/>}/>
+      <Route path="/category/:id" exact element={<ItemListContainer/>}/>
+      <Route path="/item/:id" exact element={<ItemDetailContainer />}/>
+      <Route path="*" exact element={<Error404/>}/>
+  </Routes>
+  </BrowserRouter>
 
-      <ItemListContainer greeting="TuTecnoStore" />
-      <Productos clase="producto1" imagen="img/laptop1.png" alt="laptop1" nombre="Laptop hp i7 8gb" stock="2" />
-      <Productos clase="producto2" imagen="img/ipad.png" alt="ipad" nombre="iPad 10.2 pulgadas 64gb" stock="2"/>
-      <Productos clase="producto3" imagen="img/asus.png" alt="asus" nombre="Tablet Asus Vivobook" stock="2"/>
-      <Productos clase="producto4" imagen="img/epson.png" alt="epson" nombre="Impresora Epson multifunción ecotank" stock="4"/>
-      <Productos clase="producto5" imagen="img/brother.png" alt="brother" nombre="Multifuncional Brother DCPT520W Inyección" stock="2"/>
-      <Productos clase="producto6" imagen="img/msi.png" alt="pc" nombre="Laptop Gamer MSI Bravo AMD Ryzen 7 " stock="2"/>
-
+       
 
     </div>
     

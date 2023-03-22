@@ -1,36 +1,37 @@
-import React from "react";
-import { useState } from "react";
+import React from "react"
+import { useState } from "react"
+import { Link } from "react-router-dom"
+
 
 const Chequeo=(contador,stock)=> contador >= stock ? false : true
 
 
 
-function Productos(props){
+function Item(item){ 
+   
     const [contador,setContador] = useState(0)
     
-    const Sumar=()=> setContador(Chequeo(contador,props.stock)? contador+1 : contador)
+    const Sumar=()=> setContador(Chequeo(contador,item.stock)? contador+1 : contador)
 
     const Restar=()=> setContador(contador-1) 
 
         return(
  <div className="gondola">
-    <div className={props.clase}>
+    <div className={item.class}>
                 
-        <img src={props.imagen} alt={props.alt}/>
+        <img src={item.image} alt={item.alt}/>
         <ul className="caracteristicasProducto">
              
             <li>
-                {props.nombre}
+                {item.name}
             </li>
-           
         </ul>
-                
-    </div> 
-    
-        <button className="btnDetalles">
-            Ver detalles            
-        </button>
-        <button className="indicadorStock">Quedan: {props.stock-contador}</button>
+     </div> 
+        <Link to={`/item/:${item.id}`}><button className="btnDetalles">
+        Ver detalles 
+        </button></Link>
+        
+        <button className="indicadorStock">Quedan: {item.stock-contador}</button>
         <p className="controlGrupal">  
         <button onClick={Sumar} className="btnAgregar">
             +            
@@ -45,4 +46,4 @@ function Productos(props){
             
         )
     }
-export default Productos
+export default Item
