@@ -13,7 +13,7 @@ function Item(item){
     
     const Sumar=()=> setContador(Chequeo(contador,item.stock)? contador+1 : contador)
 
-    const Restar=()=> setContador(contador-1) 
+    const Restar=()=> contador===0? contador : setContador(contador-1) 
 
         return(
  <div className="gondola">
@@ -27,8 +27,8 @@ function Item(item){
             </li>
         </ul>
      </div> 
-        <Link to={`/item/:${item.id}`}><button className="btnDetalles">
-        Ver detalles 
+        <Link to={"/item/" + item.id}><button className="btnDetalles">
+        Ver detalles
         </button></Link>
         
         <button className="indicadorStock">Quedan: {item.stock-contador}</button>

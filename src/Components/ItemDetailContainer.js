@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
         const promesa = new Promise((resolve) => {
             console.log(id);
             setTimeout(() => {
-                resolve(arrayProductos.find(item => item.id  === parseInt(id)))
+                resolve(arrayProductos.filter(item => item.id  === parseInt(id)))
             }, 1000)
         }, [])
 
@@ -24,7 +24,11 @@ const ItemDetailContainer = () => {
 
     return(
         <div>
-        <ItemDetail item={item} />
+        <ItemDetail id={item.id}
+                    name={item.name}
+                    description={item.description}
+                    stock={item.stock}
+                    image={item.image} />
         </div> 
 
         

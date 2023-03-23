@@ -11,7 +11,7 @@ const ItemDetail = (item) => {
     
     const Sumar=()=> setContador(Chequeo(contador,item.stock)? contador+1 : contador)
 
-    const Restar=()=> setContador(contador-1) 
+    const Restar=()=> contador===0? contador : setContador(contador-1) 
 
 
     return (
@@ -30,11 +30,11 @@ const ItemDetail = (item) => {
                 </li>
             </ul>
          </div> 
-            <Link to={"/"}><button className="btnDetalles">
+            <Link to={"/"}><button className="btnAtras">
             Volver atrás
             </button></Link>
             
-            <button className="indicadorStock">Quedan: {item.stock-contador}</button>
+            <button className="stockDetalles">Quedan: {item.stock-contador}</button>
             <p className="controlGrupal">  
             <button onClick={Sumar} className="btnAgregar">
                 +            
