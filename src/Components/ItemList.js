@@ -12,13 +12,7 @@ export default function ItemList({item}){
                    key={item.id}>
                     {    console.log(item.id)
 }
-             <Item class={item.class}
-             
-                   name={item.name}
-                   alt={item.alt}
-                   image={item.image}
-                   stock={item.stock}
-                   category={item.category}
+             <Item item={item}
                    
                    />
                    

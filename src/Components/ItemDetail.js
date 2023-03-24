@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Chequeo=(contador,stock)=> contador >= stock ? false : true
 
 
-const ItemDetail = (item) => {
+const ItemDetail = ({item}) => {
     const [contador,setContador] = useState(0)
     
     const Sumar=()=> setContador(Chequeo(contador,item.stock)? contador+1 : contador)
