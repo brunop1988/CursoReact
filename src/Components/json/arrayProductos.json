@@ -5,9 +5,9 @@
     "name": "Laptop hp i7 8gb",
     "description": "Windows 10 Home 7th Gen Intel® Core i7 processor; 17.3 display; 8GB memory; 1TB hard drive; webcam not included; HDMI output",
     "alt": "laphp",
-    "image": "img/laptop1.png",
+    "image": "https://i.ibb.co/Z1mfVkH/asus.png",
     "stock": 2,
-    "category": "laptop"
+    "category": "pc"
 },
 
 {
@@ -15,7 +15,7 @@
     "class": "producto2",
     "name": "iPad 10.2 pulgadas 64gb",
     "alt": "ipad",
-    "image": "img/ipad.png",
+    "image": "https://i.ibb.co/PQ2Msq0/ipad.png",
     "stock": 2,
     "category": "tablet"
 },
@@ -25,39 +25,39 @@
     "class": "producto3",
     "name": "Tablet Asus Vivobook",
     "alt": "asuvb",
-    "image": "img/asus.png",
+    "image": "https://i.ibb.co/Z1mfVkH/asus.png",
     "stock": 4,
     "category": "tablet"
 },
 
 {
     "id": 4,
-    "class": "producto1",
-    "name": "Laptop hp i7 8gb",
+    "class": "producto4",
+    "name": "Laptop MSI gamer",
     "alt": "laphp",
-    "image": "img/laptop1.png",
+    "image": "https://i.ibb.co/FmmmZpj/msi.webp",
     "stock": 2,
-    "category": "laptop"
+    "category": "pc"
 },
 
 {
     "id": 5,
-    "class": "producto2",
-    "name": "iPad 10.2 pulgadas 64gb",
+    "class": "producto5",
+    "name": "Tablet Samsung",
     "alt": "ipad",
-    "image": "img/ipad.png",
+    "image": "https://i.ibb.co/Jts1Nrj/tabletsam.png",
     "stock": 2,
     "category": "tablet"
 },
 
 {
     "id": 6,
-    "class": "producto3",
-    "name": "Tablet Asus Vivobook",
+    "class": "producto6",
+    "name": "PC Dell i5 2.8Ghz",
     "alt": "asuvb",
-    "image": "img/asus.png",
+    "image": "https://i.ibb.co/0VsYFBg/dell.png",
     "stock": 4,
-    "category": "tablet"
+    "category": "pc"
 }
 
 ]

@@ -6,10 +6,10 @@ function Navbar(){
 <div>
    
    <nav className="navbar">
-   <Cartwidget imagen="img/carrito2.png" alt="carro" />
+   <Cartwidget imagen="https://i.ibb.co/N33F6yf/carrito2.png" alt="carro" />
         <ul className="listaNavbar">
        <li><Link to="/">Home</Link></li>
-       <li><Link to="/category/laptop">PC</Link></li>
+       <li><Link to="/category/pc">PC</Link></li>
        <li><Link to="/category/tablet">Tablet</Link></li>
        <li><button className="botonBusqueda">Búsqueda de artículos
        <input className="espacioBuscar" type="search" placeholder="Marca, modelo..."/>

@@ -10,7 +10,6 @@ const ItemDetail = (item) => {
     const [contador,setContador] = useState(0)
     
     const Sumar=()=> setContador(Chequeo(contador,item.stock)? contador+1 : contador)
-
     const Restar=()=> contador===0? contador : setContador(contador-1) 
 
 

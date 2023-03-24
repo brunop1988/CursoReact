@@ -8,17 +8,20 @@ const Chequeo=(contador,stock)=> contador >= stock ? false : true
 
 
 function Item(item){ 
-   
+    
+    
     const [contador,setContador] = useState(0)
     
     const Sumar=()=> setContador(Chequeo(contador,item.stock)? contador+1 : contador)
 
     const Restar=()=> contador===0? contador : setContador(contador-1) 
 
-        return(
+
+        return(   
  <div className="gondola">
+    <span> HOLA {item.id}</span>
     <div className={item.class}>
-                
+            
         <img src={item.image} alt={item.alt}/>
         <ul className="caracteristicasProducto">
              
