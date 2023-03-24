@@ -10,8 +10,6 @@ export default function ItemList({item}){
         {item.map(item=> (
             <div   
                    key={item.id}>
-                    {    console.log(item.id)
-}
              <Item item={item}
                    
                    />

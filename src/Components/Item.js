@@ -7,7 +7,7 @@ const Chequeo=(contador,stock)=> contador >= stock ? false : true
 
 
 
-function Item(item){ 
+function Item({item}){ 
     
     
     const [contador,setContador] = useState(0)
@@ -30,7 +30,7 @@ function Item(item){
             </li>
         </ul>
      </div> 
-        <Link to={"/item/" + item.id}><button className="btnDetalles">
+        <Link to={`/item/${item.id}`}><button className="btnDetalles">
         Ver detalles
         </button></Link>
         

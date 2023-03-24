@@ -33,12 +33,12 @@ const ItemDetail = ({item}) => {
             Volver atrás
             </button></Link>
             
-            <button className="stockDetalles">Quedan: {item.stock-contador}</button>
+            <button className="stockDetalles">Quedan:{item.stock-contador}</button>
             <p className="controlGrupal">  
-            <button onClick={Sumar} className="btnAgregar">
+            <button onClick={Sumar} className="btnAgregarDetalles">
                 +            
             </button>
-            <input placeholder={contador}/>
+            <input className="inputDetalles" placeholder={contador}/>
             <button onClick={Restar} className="btnRestar"> 
                   -
             </button>

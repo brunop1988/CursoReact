@@ -2,6 +2,9 @@ import React from "react";
 
 export default function Error404(){
     return (
-        <h1>HOla</h1>
+        <div>
+        <h1>Error404</h1>
+        <h2>Pagina no encontrada</h2>
+        </div>
     )
 }
