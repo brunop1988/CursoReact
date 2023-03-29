@@ -1,15 +1,16 @@
 import React from "react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { CartContext } from "./CartContext.js"
+import { useContext } from "react"
+
+    const Chequeo=(contador,stock)=> contador >= stock ? false : true
 
 
-const Chequeo=(contador,stock)=> contador >= stock ? false : true
 
+ function Item({item}){ 
+    const { addItem } = useContext(CartContext)
 
-
-function Item({item}){ 
-    
-    
     const [contador,setContador] = useState(0)
     
     const Sumar=()=> setContador(Chequeo(contador,item.stock)? contador+1 : contador)
@@ -19,8 +20,7 @@ function Item({item}){
 
         return(   
  <div className="gondola">
-    <span> HOLA {item.id}</span>
-    <div className={item.class}>
+     <div className={item.class}>
             
         <img src={item.image} alt={item.alt}/>
         <ul className="caracteristicasProducto">
@@ -35,7 +35,7 @@ function Item({item}){
         </button></Link>
         
         <button className="indicadorStock">Quedan: {item.stock-contador}</button>
-        <p className="controlGrupal">  
+        <div className="controlGrupal">  
         <button onClick={Sumar} className="btnAgregar">
             +            
         </button>
@@ -43,7 +43,10 @@ function Item({item}){
         <button onClick={Restar} className="btnRestar"> 
               -
         </button>
-        </p>
+        <button className="agregarCompra" onClick={() => addItem({item},contador)}> 
+              Add
+        </button>       
+         </div>
  </div>
 
             

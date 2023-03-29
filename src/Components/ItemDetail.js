@@ -2,15 +2,17 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 const Chequeo=(contador,stock)=> contador >= stock ? false : true
 
 
 const ItemDetail = ({item}) => {
+ 
     const [contador,setContador] = useState(0)
     
     const Sumar=()=> setContador(Chequeo(contador,item.stock)? contador+1 : contador)
     const Restar=()=> contador===0? contador : setContador(contador-1) 
+   
+
 
 
     return (
@@ -34,7 +36,7 @@ const ItemDetail = ({item}) => {
             </button></Link>
             
             <button className="stockDetalles">Quedan:{item.stock-contador}</button>
-            <p className="controlGrupal">  
+            <div className="controlGrupal">  
             <button onClick={Sumar} className="btnAgregarDetalles">
                 +            
             </button>
@@ -42,7 +44,10 @@ const ItemDetail = ({item}) => {
             <button onClick={Restar} className="btnRestar"> 
                   -
             </button>
-            </p>
+            <button className="agregarCompra"> 
+              Add
+        </button>           
+         </div>
      </div>
     
     )
