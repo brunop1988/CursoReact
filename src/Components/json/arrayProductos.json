@@ -3,66 +3,100 @@
     "id": 1,
     "class": "producto1",
     "name": "Laptop hp i7 8gb",
-    "description": "Windows 10 Home 7th Gen Intel® Core i7 processor; 17.3 display; 8GB memory; 1TB hard drive; webcam not included; HDMI output",
+    "description1": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description2": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description3": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description4": "Windows 10 Home 7th Gen Intel® Core i7 processor",  
     "alt": "laphp",
-    "image": "https://i.ibb.co/Z1mfVkH/asus.png",
+    "image": "https://i.ibb.co/kGQP54c/laptop1.png",
     "stock": 2,
-    "category": "pc"
+    "category": "pc",
+    "price": 300
 },
 
 {
     "id": 2,
     "class": "producto2",
     "name": "iPad 10.2 pulgadas 64gb",
-    "description": "Pantalla retina brillante de 10.2 pulgadas con tecnología TrueTone Chip bionico A13 con motor neural. Cámara trasera de 8 MP cámara frontal ultra ancha de 12 MP con escenario central. Hasta 256 GB de almacenamiento Altavoces estéreo",
+    "description1": "Pantalla retina brillante de 10.2 pulgadas",
+    "description2": "Tecnología TrueTone Chip bionico A13 con motor neural.",
+    "description3": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description4": "Windows 10 Home 7th Gen Intel® Core i7 processor",
     "alt": "ipad",
     "image": "https://i.ibb.co/PQ2Msq0/ipad.png",
     "stock": 2,
-    "category": "tablet"
+    "category": "tablet",
+    "price": 300
+
+    
 },
 
 {
     "id": 3,
     "class": "producto3",
-    "description":"",
-    "name": "Tablet Asus Vivobook",
+    "description1": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description2": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description3": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description4": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "name": "Tablet Asus",
     "alt": "asuvb",
     "image": "https://i.ibb.co/Z1mfVkH/asus.png",
     "stock": 4,
-    "category": "tablet"
+    "category": "tablet",
+    "price": 300
+
 },
 
 {
     "id": 4,
     "class": "producto4",
     "name": "Laptop MSI gamer",
-    "description":"",
+    "description1": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description2": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description3": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description4": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description5": "Up to 14'' 2.8K OLED NanoEdge",
     "alt": "laphp",
     "image": "https://i.ibb.co/FmmmZpj/msi.webp",
     "stock": 2,
-    "category": "pc"
+    "category": "pc",
+    "price": 300 
+
 },
 
 {
     "id": 5,
     "class": "producto5",
-    "name": "Tablet Samsung",
-    "description":"",
+    "name": "Tablet Samsung",   
+    "description1":"Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description2": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description3": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description4": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description5": "Up to 14'' 2.8K OLED NanoEdge",
+
     "alt": "ipad",
     "image": "https://i.ibb.co/Jts1Nrj/tabletsam.png",
     "stock": 2,
-    "category": "tablet"
+    "category": "tablet",
+    "price": 300 
+
 },
 
 {
     "id": 6,
     "class": "producto6",
     "name": "PC Dell i5 2.8Ghz",
-    "description":"",
+    "description1": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description2": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description3": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description4": "Windows 10 Home 7th Gen Intel® Core i7 processor",
+    "description5": "Up to 14'' 2.8K OLED NanoEdge",
     "alt": "asuvb",
     "image": "https://i.ibb.co/0VsYFBg/dell.png",
     "stock": 4,
-    "category": "pc"
+    "category": "pc",
+    "price": 300 
+
 }
 
 ]

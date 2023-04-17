@@ -1,13 +1,17 @@
 import { createContext, useState } from "react";
+import { $ } from "jquery";
 
     export const CartContext = createContext(0)
 
+
     export const CartProvider = ({ children }) => {
-        
+
         const [cart, setCart] = useState([]);
 
+        const [contadorGlobal, setContadorGlobal] = useState(0)
+        
         const isInCart = (id) => {
-            return cart.some((e) => e.id === id);
+            return cart.find((e) => e.id === id);
         };
     
         const addItem = (item, amount) => {
@@ -16,25 +20,56 @@ import { createContext, useState } from "react";
                setCart([...cart, itemAmount])
             } else {
                 
-                console.log(cart)
-                const newProducts = cart.map(prod => {
-                    if(prod.id === item.id) {
+            
+                const newProducts = cart.map((prod) => {
+                    setContadorGlobal(prod.amount+amount)
+                    if(prod.id === item.id && prod.amount + amount <= item.stock) {
                         const newProduct = {
                             ...prod,
-                            amount: prod.amount + amount
+                            amount: (prod.amount + amount)
                         }
                         return newProduct
                     } else {
+                       
                         return prod
                     }
                 })
-                 console.log(newProducts)
+                
                 setCart(newProducts)
             }
         }
+
+        const clearCart = () =>{
+           setCart([])
+           setContadorGlobal(0)
+            }
     
+    
+
+        const removeItem = (id) =>{ 
+            let newCart = cart.filter(itemInCart => itemInCart.id !== id)
+            setCart(newCart)
+        }
+    
+        const getTotalPrice = () =>{
+            return cart.reduce((prev,act) => prev + act.amount * act.price, 0)
+        }
+
+        const getTotalItemCount = () =>{
+        
+            return cart.reduce((acum,prod)=> acum += (prod.amount),0)
+        
+        }
+
+        
+
+        const handleContadorGlobal = (cantidad) =>{
+            setContadorGlobal(cantidad)
+        }
+    
+         
         return(
-            <CartContext.Provider value={{cart, addItem}}>
+            <CartContext.Provider value={{cart, clearCart, removeItem, getTotalPrice, getTotalItemCount, addItem, handleContadorGlobal, contadorGlobal}}>
                 {children}
         </CartContext.Provider>
     )

@@ -1,13 +1,22 @@
+
 import React, { useContext } from "react"
 import { CartContext } from "./CartContext.js"
+import { Link } from "react-router-dom"
 
 function Cartwidget(props){
 
-const { items } = useContext(CartContext) 
+const { getTotalItemCount } = useContext(CartContext) 
   return ( 
    <div className="carrito">
-     <img className="carritoAnimacion" src={props.imagen} alt={props.alt}/>
-        <button  className="notifCarrito"><span>{items}</span></button>
+     <Link to={"/listaCarrito"} ><img className="carritoAnimacion" 
+      src={props.imagen} alt={props.alt}/></Link>
+      
+      <button className="notifCarrito"><span>
+          <>
+          {getTotalItemCount()}
+          </>
+        </span></button>
+    
   </div>
     )
 

@@ -1,0 +1,44 @@
+.listaCarrito{
+    display: flex ;
+flex-direction: column;
+margin-left: 27pc;
+width: 25%;
+background-color: white ;
+}
+
+.precioTotal{
+    margin-top: 80px    ;
+}
+
+.imagenCarrito{
+    margin-left: 35px;
+    width: max-content;
+    border: lightgray 1px solid;
+    padding: 12px 30px;
+    
+    
+}
+
+.precioArticulo{
+    border-bottom: black 1px solid;
+    padding-bottom: 20px;    
+}
+
+.precioUnitario{
+    border-bottom: lightgray 1px dotted;
+    padding-bottom: 34px;
+}
+
+.confirmarCompra{
+    width: 8pc;
+    margin:auto;
+    height: 50px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.confirmarCompra:hover{
+    background-color: red;
+    font-size: 20px;
+    
+}

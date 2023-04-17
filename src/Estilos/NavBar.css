@@ -1,0 +1,161 @@
+.navbar{
+padding-left: 100px;
+padding-right: 70px;
+}
+
+.listaNavbar  { 
+
+  margin: 0;
+  padding-left: 120px;
+  overflow:hidden;
+  
+  background-color: #333;
+}
+
+
+.botonBusqueda{
+  margin-top:15px;
+  margin-left: 70px;
+  border: none;
+  background-color: #333;
+  font-size: 16px;
+  color:white;}
+  
+li {
+  display: block;
+  float: left;
+  color:white;
+  text-align: center;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 30px ;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+
+.liAbout{
+  background-color:rgb(44, 150, 127);
+  float: right;
+  margin-right: 100px;
+  
+  }
+
+img{
+  height: 150px;
+  width: 180px;
+}
+ 
+.carritoAnimacion{
+  margin-top: 20px;
+  height: 60px;
+  width: 55px;
+  position:fixed;
+  margin-left: 20px;
+  border-style:inset;
+  border-color: rgb(248, 6, 6);
+  border-radius: 50%;
+  
+}
+
+
+.notifCarrito{
+  margin-top: 72px;
+  margin-left: 60px;
+  position:fixed;
+  border-radius: 20px;
+  border-style:double;
+  background-color: rgb(243, 4, 4);
+  
+}
+
+.vaciarCarrito{
+  margin-top:70px;
+  margin-left: 20px;
+  float: left;
+  height: 50px;
+  width: 45px;
+  position:fixed;
+  border: none;
+  background-color: transparent;
+}
+
+.botonVaciar{
+  border: none;
+}
+
+
+
+@font-face {
+  font-family: 'Tecno';
+  src: url(../../public/fuentes/TechnoLogic.ttf);
+}
+.saludo{
+  font-family: 'Tecno';
+  font-size: 60px;
+  color:rgb(17, 70, 58);
+  margin-bottom: -50px;
+  margin-left: 100px;
+}
+
+.loading{
+  margin-top: 300px;
+  margin-left: 500px;
+  position: relative;
+    height: 10px;
+    width: 20%;
+    border: 6px solid #110d0d;
+    border-radius: 15px;
+}
+
+.loading .color{
+  position: absolute;
+  width: 0px;
+  height: 10px;
+  border-radius: 15px;
+  animation: progres 2s infinite linear;
+  animation-iteration-count: infinite;
+
+}
+
+
+@keyframes progres {
+  0%{
+    width: 0%;
+    background-color:rgb(93, 212, 185);
+  }
+  25%{
+    background-color:rgb(29, 124, 102);
+    width: 50%;
+  }
+  50%{
+    background-color:rgb(24, 97, 79); 
+    width: 75%;
+  }
+  75%{
+      width: 85%;
+      background-color:rgb(18, 71, 59); 
+
+  }
+  100%{
+    background-color:rgb(14, 58, 48); 
+      width: 100%;
+  }
+  
+  
+    
+    }
+
+
+          
+            
+          
+      
+      

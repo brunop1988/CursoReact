@@ -1,19 +1,43 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList.js'
-import arrayProductos from '../Components/json/arrayProductos.json'
+import { getDocs , collection, getFirestore , where , query} from 'firebase/firestore'
 
 export default function ItemListContainer(props){
 
 
     const [item, setItem] = useState([])
-    const {id} = useParams ()
+    const { categoryId } = useParams ()
+    const [loading, setLoading] = useState(false)
+    
 
-    useEffect(() => {
+
+
+    useEffect(()=> {
+                setLoading(true)
+                 const queryDb = getFirestore()
+                 const queryCollection = collection(queryDb, 'items')
+                 if(categoryId){
+               const queryFilter = query(queryCollection, where('category','==', categoryId))
+                    getDocs(queryFilter)    
+                    .then(res=>setItem(res.docs.map(prod=>({id: prod.id, ...prod.data()}))))
+                    .finally(()=> setLoading(false))
+                 }else{
+                    getDocs(queryCollection)
+                    .then(res=>setItem(res.docs.map(prod=>({id: prod.id, ...prod.data()}))))
+                    .finally(()=> setLoading(false))
+
+                 }
+     },[categoryId])
+
+
+  /*  useEffect(() => {
         const promesa =  new Promise((resolve)=> {
         setTimeout(()=> {
+
             resolve(id ? arrayProductos.filter(item => item.category === id) : arrayProductos)
-        }, 1000)
+        }, 4000)
+    
     })
     
 
@@ -21,15 +45,15 @@ export default function ItemListContainer(props){
             setItem(data)
         })
 
+
     },[id])
 
-  
+     */
+   
         return(
             <div>
-            
-            <h1 className="saludo">{props.greeting}</h1>
-            
-            <ItemList item={item}/>
+               { loading ? <h1 className='loading'><div className='color'></div></h1>: 
+            <><h1 className="saludo">{props.greeting}</h1><ItemList item={item} /></>}
             </div>
             )
 

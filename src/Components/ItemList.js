@@ -1,5 +1,4 @@
-import { useState } from "react"
-import Cartwidget from "./CartWidget.js"
+
 import Item from "./Item.js"
 
 export default function ItemList({item}){
