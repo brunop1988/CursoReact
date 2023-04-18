@@ -6,6 +6,8 @@
     width: 230px;
     height: 350px;
     background-color: rgb(17, 70, 58);
+    
+
 }
 
 .detalleProducto {
@@ -111,6 +113,8 @@ li {
     margin-bottom: -10px;
     margin-left: 14px;
     font-family: Arial, Helvetica, sans-serif;
+    
+
 }
 
 .btnAtras {

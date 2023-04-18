@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import { createOrdenCompra,getOrdenCompra,getProducto,updateProducto } from '../Firebase/Firebase.js';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext.js';
 
 const Checkout = () => {
@@ -47,19 +47,19 @@ const Checkout = () => {
     <div className="formCheckout">
       
       <form onSubmit={consultarFormulario} ref={datosFormulario}>
-    <label for="fname">Nombre</label>
+    <label >Nombre</label>
     <input type="text" className="idPerson" name="nombre" placeholder="Ingresa tu nombre.."/>
 
-    <label for="lname">Apellido</label>
+    <label >Apellido</label>
     <input type="text" className="idPerson" name="apellido" placeholder="Ingresa tu apellido.."/>
    
-    <label for="lname">Dirección</label>
+    <label >Dirección</label>
     <input type="text" className="idPerson" name="direccion" placeholder="Ingresa tu dirección.."/>
 
-    <label for="lname">Email</label>
+    <label >Email</label>
     <input type="text" className="idPerson" name="email" placeholder="Ingresa tu email.."/>
 
-    <label for="lname">Celular</label>
+    <label >Celular</label>
     <input type="text" className="idPerson" name="celular" placeholder="Ingresa tu número telefónico.."/>
 
 

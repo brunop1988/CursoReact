@@ -53,15 +53,22 @@ const deleteProducto = async(id) =>{
   return estado
 }
 
+
 const createOrdenCompra = async (cliente, cart, preTotal, fecha ) => {
+  const productosComprados = cart.map(prod =>({
+      Producto :prod.name,
+      Precio :prod.price,
+      Cantidad :prod.amount,
+      Precio_total:prod.price*prod.amount}))
+
   const ordenCompra = await addDoc(collection(db, "orders"),{
-      nombre: cliente.nombre,
-      email: cliente.email,
-      direccion: cliente.direccion,
-      celular: cliente.celular,
-      fecha: fecha,
-      precioTotal: preTotal,
-      productos: cart.map(prod=> prod.name),
+      Nombre_cliente: cliente.nombre,
+      Email: cliente.email,
+      Dirección: cliente.direccion,
+      Celular: cliente.celular,
+      Fecha: fecha,
+      Precio_Total_Compra: preTotal,
+      Productos: {productosComprados}
                 
     })
 
@@ -74,4 +81,19 @@ const getOrdenCompra =  async (id) => {
   return item
 }
 
-export {getProducto, getProductos, updateProducto , createOrdenCompra , getOrdenCompra}
+const createUsuario = async (client, date ) => {
+  
+
+  const ordenCompra = await addDoc(collection(db, "users"),{
+      Nombre_cliente: client.nombre,
+      Email: client.email,
+      Dirección: client.address,
+      Celular: client.cellphone,
+      Fecha: date,
+                
+    })
+
+  return ordenCompra
+}
+
+export { getProducto, getProductos, updateProducto , createOrdenCompra , getOrdenCompra, createUsuario}

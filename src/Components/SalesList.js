@@ -14,15 +14,14 @@ const SalesList = () => {
     <div className="listaCarrito" >
         
         {cart.map(item=>(
-            <>
-            <span key={item.id}></span>
+            <div key={item.id}>
             <h1>{item.amount} {item.name}</h1>
         
             <h2 className='imagenCarrito'><img src={item.image} alt={item.alt}/></h2>
             <h2 className='precioUnitario'>Precio unitario: US$ {item.price}</h2>
             <h2 className='precioArticulo'>Precio total de artículo: US$ {item.price*item.amount}</h2>
 
-            </> 
+            </div> 
             
             ))}
         <h2 className='precioTotal'>
