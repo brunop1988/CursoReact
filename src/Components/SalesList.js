@@ -1,7 +1,6 @@
 import React from 'react'
 import { CartContext } from './CartContext.js'
 import { useContext } from "react";
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
 
 const SalesList = () => {

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getFirestore, getDoc , doc } from "firebase/firestore"
-import { db } from "../Firebase/Firebase.js"
+import { db, getProducto } from "../Firebase/Firebase.js"
 import ItemDetail from './ItemDetail.js'
 
 const ItemDetailContainer = () => {
@@ -12,35 +11,11 @@ const ItemDetailContainer = () => {
 
 useEffect(()=>{
     setLoading(true)
-    const queryDB = getFirestore()
-    const queryDoc = doc(queryDB, 'items', id)
-    getDoc(queryDoc)
-    .then(res=> setItem({id: res.id, ...res.data()})).finally(()=> setLoading(false))
+     getProducto(id).then(prod=> setItem(prod))
+    setLoading(false)
 },[id] )    
 
 
-
-
-    /*
-    const promesa= (id) => {
-        return new Promise((resolve) => {
-            const productoFiltrado  = arrayProductos.find(p => p.id === parseInt(id))
-            setTimeout(() => {
-                resolve(productoFiltrado)
-            }, 1000)
-        })
-      }
-
-
-    useEffect(() => {
-            promesa(id).then((data) => {
-            setItem(data)
-        })
-
-    }, [id])
-    
-
-   */
     
     
     return(

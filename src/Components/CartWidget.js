@@ -13,7 +13,7 @@ const { getTotalItemCount } = useContext(CartContext)
       
       <button className="notifCarrito"><span>
           <>
-          {getTotalItemCount()}
+          {getTotalItemCount(props.id)}
           </>
         </span></button>
     

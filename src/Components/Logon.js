@@ -1,12 +1,10 @@
-import React, { useContext } from 'react'
-import {  toast } from 'react-toastify';
-import { createOrdenCompra,getOrdenCompra,getProducto,updateProducto } from '../Firebase/Firebase.js';
+import React from 'react'
+import { toast } from 'react-toastify';
+import { getUser, createUser } from '../Firebase/Firebase.js';
 import {  useNavigate } from 'react-router-dom';
-import { CartContext } from './CartContext.js';
 
 
 const Logon = () => {
-    const {getTotalPrice, cart, clearCart} = useContext(CartContext)
     const datosFormulario = React.useRef()
     let navigate = useNavigate()
     const consultarFormulario = (e) => {
@@ -15,29 +13,26 @@ const Logon = () => {
         const client = Object.fromEntries(datForm)
   
   
-            getUsuarios(person.id).then(usersBDD => {
-                if(usersBDD.id == client.document) {
-                    
+            getUser(client.id).then(usersBDD => {
+                if(usersBDD.id === client.document) {
+                    toast.error("Su usuario no fue creado con exito")
+
   
                 } else {
-                    console.log("Stock no valido")
+                    createUser(client , new Date().toISOString()).then(user => {
+
+                        toast.success(`¡Muchas gracias por su registro ${user.id}`)
+                        
+                        e.target.reset()
+                        navigate("")
                     
-                }
-            })
+                })
+            }})
+        
     
   
-        createUser(client , new Date().toISOString()).then(user => {
-
-                toast.success(`¡Muchas gracias por su registro ${user.id}`)
-                
-                e.target.reset()
-                navigate("")
-            }).catch(error => {
-                toast.error("Su usuario no fue creado con exito")
-                console.error(error)
-            })
-            
         
+          
         
     }
   
@@ -83,3 +78,4 @@ const Logon = () => {
 
 )
 }
+export default Logon

@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList.js'
-import { getDocs , collection, getFirestore , where , query} from 'firebase/firestore'
-
+import { getProductos } from '../Firebase/Firebase.js'
 export default function ItemListContainer(props){
 
 
@@ -15,41 +14,22 @@ export default function ItemListContainer(props){
 
     useEffect(()=> {
                 setLoading(true)
-                 const queryDb = getFirestore()
-                 const queryCollection = collection(queryDb, 'items')
                  if(categoryId){
-               const queryFilter = query(queryCollection, where('category','==', categoryId))
-                    getDocs(queryFilter)    
-                    .then(res=>setItem(res.docs.map(prod=>({id: prod.id, ...prod.data()}))))
-                    .finally(()=> setLoading(false))
+                    getProductos().then(products => {
+                        const productsList= products.filter(prod => prod.stock > 0).filter(prod => prod.category === categoryId)
+                        setItem(productsList)
+                        setLoading(false)})
                  }else{
-                    getDocs(queryCollection)
-                    .then(res=>setItem(res.docs.map(prod=>({id: prod.id, ...prod.data()}))))
-                    .finally(()=> setLoading(false))
-
+                    getProductos().then(products => {
+                        const productsList= products.filter(prod => prod.stock > 0)
+                    setItem(productsList)
+                    setLoading(false)
+                    })
                  }
      },[categoryId])
 
 
-  /*  useEffect(() => {
-        const promesa =  new Promise((resolve)=> {
-        setTimeout(()=> {
-
-            resolve(id ? arrayProductos.filter(item => item.category === id) : arrayProductos)
-        }, 4000)
-    
-    })
-    
-
-        promesa.then((data)=> {
-            setItem(data)
-        })
-
-
-    },[id])
-
-     */
-   
+  
         return(
             <div>
                { loading ? <h1 className='loading'><div className='color'></div></h1>: 

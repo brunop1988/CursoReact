@@ -37,6 +37,14 @@ const getProductos = async() => {
   })
   return items
 }
+const getUser = async(id) => {
+  const user = await getDocs(collection(db, "users", id))
+  const person = {...user.data(), id: user.id}
+  
+  return person
+}
+
+
 
 const getProducto =  async (id) => {
   const producto = await getDoc(doc(db, "items", id))
@@ -81,7 +89,7 @@ const getOrdenCompra =  async (id) => {
   return item
 }
 
-const createUsuario = async (client, date ) => {
+const createUser = async (client, date ) => {
   
 
   const ordenCompra = await addDoc(collection(db, "users"),{
@@ -90,10 +98,11 @@ const createUsuario = async (client, date ) => {
       Dirección: client.address,
       Celular: client.cellphone,
       Fecha: date,
+    
                 
     })
 
   return ordenCompra
 }
 
-export { getProducto, getProductos, updateProducto , createOrdenCompra , getOrdenCompra, createUsuario}
+export { getProducto, getProductos, updateProducto , createOrdenCompra , getOrdenCompra, createUser, getUser}

@@ -41,7 +41,6 @@ import { $ } from "jquery";
 
         const clearCart = () =>{
            setCart([])
-           setContadorGlobal(0)
             }
     
     
@@ -63,13 +62,11 @@ import { $ } from "jquery";
 
         
 
-        const handleContadorGlobal = (cantidad) =>{
-            setContadorGlobal(cantidad)
-        }
+        
     
          
         return(
-            <CartContext.Provider value={{cart, clearCart, removeItem, getTotalPrice, getTotalItemCount, addItem, handleContadorGlobal, contadorGlobal}}>
+            <CartContext.Provider value={{cart, clearCart, removeItem, getTotalPrice, getTotalItemCount, addItem }}>
                 {children}
         </CartContext.Provider>
     )

@@ -7,7 +7,7 @@ import { useContext } from "react";
 
 
 const ItemDetail = ({item}) => {
-    const { addItem ,removeItem , contadorGlobal } = useContext(CartContext)
+    const { addItem ,removeItem } = useContext(CartContext)
  
     const [contador,setContador] = useState(0)
     
@@ -71,9 +71,9 @@ const ItemDetail = ({item}) => {
             <button onClick={restar} disabled={contador===0} className="btnRestar"> 
                   -
             </button>
-             { contadorGlobal < item.stock ? <button className="agregarCompra" onClick={() => addItem(item,contador)}> 
+             <button className="agregarCompra" onClick={() => addItem(item,contador)}> 
               Agregar al <img className="carroBoton" src="https://i.ibb.co/98CrknM/carroboton.png" alt="lcdth"/>
-            </button>:<button className="limpieCarrito" >Limpie su <img className="carroBoton2" src="https://i.ibb.co/98CrknM/carroboton.png" alt="lcdth"/></button>}                  
+            </button>                 
            </p>
               
          </div>
