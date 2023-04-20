@@ -9,6 +9,62 @@
     box-sizing: border-box;
     text-align: left;
   }
+
+  .colorAst{
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display:flex;
+    font-size: 20px;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: left;
+  }
+.errorMsg {
+  display: none;
+}
+
+.adviceObligatory{
+  margin-left: 36pc;
+  display: block;
+  width: 180px; /*le damos el mismo tamaño que el input*/
+  font-size: 16px; /*reducimos el tamaño de la fuente*/
+  line-height: 1.5;
+  color: red; /*lo coloreamos de rojo*/
+}
+:invalid ~ .errorMsg{
+  display: block;
+  width: 180px; /*le damos el mismo tamaño que el input*/
+  font-size: 16px; /*reducimos el tamaño de la fuente*/
+  line-height: 1.5;
+  color: red; /*lo coloreamos de rojo*/
+}
+  .email:invalid , .idPerson:invalid{
+    border-color:red;
+    border-width: 3px;
+  }
+
+  .email:valid, .idPerson:valid{
+    border-color:green;
+    border-width: 3px;
+  }
+
+  .email{
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+
+
+  
+
   
   .submitCheckout {
     width: 96%;
@@ -29,7 +85,7 @@
   .formCheckout {
     border-radius: 5px;
 width: 60%;
-background-color:rgb(44, 150, 127);
+background-color:rgb(97, 216, 190);
     margin-left: 13pc;
     margin-top: 50px;
     padding: 20px;

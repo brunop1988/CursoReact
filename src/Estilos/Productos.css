@@ -3,12 +3,14 @@
     float: left;
     border-style: ridge;
     margin-left: 150px;
-    width: 230px;
+    width: 250px;
     height: 350px;
     background-color: rgb(17, 70, 58);
     
 
 }
+
+
 
 .detalleProducto {
     margin-top: 80px;

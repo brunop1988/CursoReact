@@ -1,10 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {  toast } from 'react-toastify';
 import { createOrdenCompra,getOrdenCompra,getProducto,updateProducto } from '../Firebase/Firebase.js';
 import {  useNavigate } from 'react-router-dom';
 import { CartContext } from './CartContext.js';
+import { error } from 'jquery';
 
 const Checkout = () => {
+  const [isInvalid, setIsInvalid] = useState(false)
   const {getTotalPrice, cart, clearCart} = useContext(CartContext)
   const datosFormulario = React.useRef()
   let navigate = useNavigate()
@@ -14,7 +16,8 @@ const Checkout = () => {
       const cliente = Object.fromEntries(datForm)
 
       const aux = [...cart]
-
+      console.log(cliente.email,cliente.email2)
+if (cliente.email === cliente.email2){
       aux.forEach(prodCarrito => {
           getProducto(prodCarrito.id).then(prodBDD => {
               if(prodBDD.stock >= prodCarrito.amount) {
@@ -22,11 +25,12 @@ const Checkout = () => {
                   updateProducto(prodCarrito.id, prodBDD)
 
               } else {
-                  console.log("Stock no valido")
-                  
+                    console.error(error)                  
               }
           })
       })
+
+      
 
       createOrdenCompra(cliente,cart, getTotalPrice(), new Date().toISOString()).then(ordenCompra => {
           getOrdenCompra(ordenCompra.id).then(item => {
@@ -41,36 +45,55 @@ const Checkout = () => {
           
       })
       
+  }else{
+      setIsInvalid(true)
   }
-
+  }
   return (
     <div className="formCheckout">
       
       <form onSubmit={consultarFormulario} ref={datosFormulario}>
-    <label >Nombre</label>
-    <input type="text" className="idPerson" name="nombre" placeholder="Ingresa tu nombre.."/>
+    
+      <label>
+      <div className='adviceObligatory'>* Campos obligatorios</div>
+    </label>
 
-    <label >Apellido</label>
-    <input type="text" className="idPerson" name="apellido" placeholder="Ingresa tu apellido.."/>
-   
-    <label >Dirección</label>
-    <input type="text" className="idPerson" name="direccion" placeholder="Ingresa tu dirección.."/>
+    
+    <label>Nombre *
+    <input  type="text" className="idPerson" name="nombre" placeholder="Ingresa tu nombre.." required/>
+    <div className='errorMsg'>*</div>
+    </label>
 
-    <label >Email</label>
-    <input type="text" className="idPerson" name="email" placeholder="Ingresa tu email.."/>
+    <label >Apellido *
+    <input type="text" className="idPerson" name="apellido" placeholder="Ingresa tu apellido.." required/>
+    <div className='errorMsg'>*</div>
+    </label>
+
+
+    <label >Dirección *
+    <input type="text" className="idPerson" name="direccion" placeholder="Ingresa tu dirección.." required/>
+    <div className='errorMsg'>*</div>
+    </label>
+
+    <label >Email *
+    <input type="email" className="email" name="email" placeholder="Ingresa tu email.." required/>
+    <div className='errorMsg'>*</div>
+    </label>
+
+
+    <label >Repita email * 
+    <input type="email" className="email" name="email2" placeholder="Ingresa tu email.." required/>
+    <div className='errorMsg'>*</div>
+    {isInvalid ? <div className='adviceObligatory'>Los email no coinciden</div>: isInvalid}
+
+    </label>
 
     <label >Celular</label>
-    <input type="text" className="idPerson" name="celular" placeholder="Ingresa tu número telefónico.."/>
+    <input type="number" className="idPerson" name="celular" placeholder="Ingresa tu número telefónico.."/>
 
 
 
-    <label>Medio de pago</label>
-    <select id="country" name="country" placeholder='pick'>
-    <option value="" hidden >Seleccione.... </option>
-      <option  value="australia">Visa</option>
-      <option value="canada">Master</option>
-      <option value="usa">PayPal</option>
-    </select>
+
   
     <input type="submit" className='submitCheckout' value="Submit"/>
     

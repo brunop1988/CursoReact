@@ -26,8 +26,10 @@ const SalesList = () => {
         <h2 className='precioTotal'>
             Precio total: US$ {getTotalPrice()}
         </h2>
-        <button className="confirmarCompra"><Link  className="nav-link" to={'/'}>Continuar comprando</Link></button>
-        <button className="confirmarCompra"><Link  className="nav-link" to={'/checkout'}>Finalizar Compra</Link></button>
+      <div className='botonesCompra'>
+      <Link  className="nav-link" to={'/'}><button className="continuarComprando">Continuar comprando</button></Link>
+      <Link  className="nav-link" to={'/checkout'}><button className="confirmarCompra">Finalizar Compra</button></Link>
+      </div>
     </div>
   )
 }

@@ -27,10 +27,11 @@ import { Link } from "react-router-dom"
            
         </ul>
      </div> 
+     <div className="botonesGondola">
         <Link to={`/item/${item.id}`}><button className="btnDetalles">
         Ver detalles
         </button></Link>
-        
+        </div>
         
            
          
