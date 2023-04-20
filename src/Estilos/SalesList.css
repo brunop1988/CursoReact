@@ -1,0 +1,61 @@
+.listaCarrito{
+    display: flex ;
+flex-direction: column;
+margin-left: 27pc;
+width: 25%;
+background-color: white ;
+}
+
+.precioTotal{
+    margin-top: 80px    ;
+}
+
+.imagenCarrito{
+    margin-left: 35px;
+    width: max-content;
+    border: lightgray 1px solid;
+    padding: 12px 30px;
+    
+    
+}
+
+.precioArticulo{
+    border-bottom: black 1px solid;
+    padding-bottom: 20px;    
+}
+
+.precioUnitario{
+    border-bottom: lightgray 1px dotted;
+    padding-bottom: 34px;
+}
+
+.botonesCompra{
+    display: flex;
+    flex: row;
+    align-items: center;
+}
+.confirmarCompra{
+    width:125%;
+    border-radius: 6%;
+    height: 50px;
+    font-size: 15px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.confirmarCompra:hover{
+    background-color: rgb(241, 11, 11);
+    
+}
+
+.continuarComprando{
+    width: fit-content;
+    height: 50px;
+    font-size: 15px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.continuarComprando:hover{
+    background-color: rgb(28, 109, 90);
+}
