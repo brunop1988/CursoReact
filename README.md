@@ -8,7 +8,7 @@ El uso de CSS puro se debe a la intención de practicar en parte los conocimient
 
 Dependencias npm extra:
 
-react-toastify para avisar las órdenes de compra existosas
+react-toastify para avisar las órdenes de compra exitosas
 =======
-Código en branch ProyectoFinal
+
 >>>>>>> 50a701dd603c58399b3cad21f363c714fc8d368d
