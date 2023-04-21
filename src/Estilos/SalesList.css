@@ -3,7 +3,7 @@
 flex-direction: column;
 margin-left: 27pc;
 width: 25%;
-background-color: white ;
+background-color: whitesmoke ;
 }
 
 .precioTotal{
@@ -45,6 +45,7 @@ background-color: white ;
 
 .confirmarCompra:hover{
     background-color: rgb(241, 11, 11);
+    color:white;
     
 }
 
@@ -57,5 +58,6 @@ background-color: white ;
 }
 
 .continuarComprando:hover{
-    background-color: rgb(28, 109, 90);
+  background-color:rgb(44, 150, 127);
+    color:white;
 }

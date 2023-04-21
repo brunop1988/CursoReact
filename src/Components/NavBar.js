@@ -20,12 +20,9 @@ function Navbar(){
       <li><Link to="/">Home</Link></li>
       <li><Link to="/category/laptop">Laptop</Link></li>
       <li><Link to="/category/tablet">Tablet</Link></li>
-      <li><button className="botonBusqueda">Búsqueda de artículos
-
-      <input className="espacioBuscar" type="search" placeholder="Marca, modelo..."/>
-      <input type="submit" value="buscar"/></button>
       
-      </li>
+      
+      
       <li className="liAbout"><Link className="active" href="#about">About</Link></li>
      
     </ul>

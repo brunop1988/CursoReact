@@ -1,9 +1,8 @@
-import { useContext, useEffect, useState } from 'react'
+import {  useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from './ItemList.js'
 import { getProductos } from '../Firebase/Firebase.js'
-import { CartContext } from './CartContext.js'
-import { getValue } from '@testing-library/user-event/dist/utils/index.js'
+
 export default function ItemListContainer(props){
 
 

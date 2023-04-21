@@ -1,4 +1,4 @@
-import { getFirestore ,addDoc, collection, getDocs, getDoc, doc, updateDoc ,deleteDoc } from "firebase/firestore"
+import { getFirestore ,addDoc, collection, getDocs, getDoc, doc, updateDoc } from "firebase/firestore"
 import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 
@@ -16,19 +16,6 @@ const app = initializeApp(firebaseConfig)
 //  const analytics = getAnalytics(app)
 export const db = getFirestore(app)
 
-const cargarBDD = async () => {
-  const promise = await fetch('./json/arrayProductos.json')
-  const productos = await promise.json()
-  productos.forEach(async (prod) => {
-      await addDoc(collection(db,"items"), { 
-          nombre: prod.nombre,
-          idCategoria: prod.idCategoria,
-          stock: prod.stock,
-          precio: prod.precio,
-          img: prod.img
-      })
-  })
-}
 
 const getProductos = async() => {
   const productos = await getDocs(collection(db, "items"))
@@ -44,6 +31,7 @@ const getUser = async(id) => {
   return person
 }
 
+  
 
 
 const getProducto =  async (id) => {
@@ -56,10 +44,6 @@ const updateProducto = async (id, info) => {
   return estado
 }
 
-const deleteProducto = async(id) =>{
-  const estado = await deleteDoc(doc(db, "items", id))
-  return estado
-}
 
 
 const createOrdenCompra = async (cliente, cart, preTotal, fecha ) => {
