@@ -1,0 +1,348 @@
+.gondola {
+    margin-top: 120px;
+    float: left;
+    border-style: ridge;
+    margin-left: 150px;
+    width: 250px;
+    height: 350px;
+    background-color: rgb(17, 70, 58);
+    
+
+}
+
+
+
+.detalleProducto {
+    margin-top: 80px;
+    border-style: ridge;
+    margin-left: 250px;
+    width: 650px;
+    height: 350px;
+    background-color: rgb(17, 70, 58);
+}
+
+.imgDetalle {
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 20pc;
+    background-color: rgb(222, 240, 236);
+    height: 150px;
+    width: 180px;
+    overflow: visible;
+}
+
+.producto1 {
+
+    border-radius: 20pc;
+    background-color: rgb(222, 240, 236);
+    margin: 0 auto;
+    height: 150px;
+    width: 180px;
+}
+
+.producto2 {
+    background-color: rgb(222, 240, 236);
+    border-radius: 20pc;
+    margin: 0 auto;
+    height: 150px;
+    width: 180px;
+}
+
+
+.producto3 {
+    border-radius: 20pc;
+    background-color: rgb(222, 240, 236);
+    margin: 0 auto;
+    height: 150px;
+    width: 180px;
+}
+
+.producto4 {
+    border-radius: 20pc;
+    background-color: rgb(222, 240, 236);
+    margin: 0 auto;
+    height: 150px;
+    width: 180px;
+}
+
+.producto5 {
+    border-radius: 20pc;
+    background-color: rgb(222, 240, 236);
+    margin: 0 auto;
+    height: 150px;
+    width: 180px;
+}
+
+.producto6 {
+    border-radius: 20pc;
+    background-color: rgb(222, 240, 236);
+    margin: 0 auto;
+    height: 150px;
+    width: 180px;
+}
+
+
+.caracteristicasProducto {
+    background-color: rgb(17, 70, 58);
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style:disc!important;
+
+}
+
+.p2,
+.p3,
+.p4 {
+    margin-top: 15px;
+}
+
+li {
+    color: rgb(219, 210, 210);
+
+}
+
+.btnDetalles {
+
+    width: 150px;
+    color: white;
+    transition-duration: 0.4s;
+    background-color: rgb(89, 89, 129);
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    padding: 12px 20px;
+    margin-top: 30px;
+    margin-bottom: -10px;
+    margin-left: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+
+.btnAtras {
+    width: 150px;
+    color: white;
+    transition-duration: 0.4s;
+    background-color: rgb(89, 89, 129);
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    padding: 12px;
+    margin-top: -30px;
+    margin-left: -320px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnAtras:hover {
+    background-color: rgb(44, 150, 127);
+    color: white;
+
+}
+
+.btnDetalles:hover {
+    background-color: rgb(44, 150, 127);
+    color: white;
+    
+
+}
+
+.btnAgregar {
+    color: white;
+    background-color: rgb(36, 36, 172);
+    border: none;
+    width: 40px;
+    border-radius: 4px;
+    font-size: 17px;
+    margin-left: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnRestar {
+    transition: 1s;
+    color: white;
+    background-color: rgb(36, 36, 172);
+    border-radius: 4px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 17px;
+    width: 40px;
+}
+
+.btnAgregarDetalles {
+    transition: 1s;
+    color: white;
+    background-color: rgb(36, 36, 172);
+    border: none;
+    width: 40px;
+    border-radius: 4px;
+    font-size: 17px;
+    margin-left: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnAgregarDetalles:disabled{
+    transition: 0.5s;
+     color:rgb(161, 158, 158);
+     background-color: rgb(118, 118, 216);
+}
+
+.btnRestar:disabled{
+    transition: 0.5s;
+     color:rgb(161, 158, 158);
+     background-color: rgb(118, 118, 216);
+
+}
+
+
+input {
+    width: 100px;
+    text-align: center;
+}
+
+.inputDetalles{
+margin-left: -13pc;
+margin-top: 2pc;
+}
+
+.controlGrupal {
+    margin-left: 10px;
+}
+
+.indicadorStock {
+    border-radius: 20px;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: 10px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.stockDetalles {
+    border-radius: 20px;
+    font-size: 15px;
+    margin-left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.liStockDetalles{
+    margin-top: -25px;
+}
+
+.precioProducto {
+
+    border-radius: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-top: 20px;
+
+}
+
+.espacioDescripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 250px;
+    padding-inline: 0%;
+    margin-top: -190px;
+
+}
+
+
+    
+
+.itemDescripcion1 {
+    margin-top: 10px;
+}
+
+.itemDescripcion2 {
+    margin-top: 10px;
+}
+.itemDescripcion3 {
+    margin-top: 10px;
+}
+.itemDescripcion4 {
+    margin-top: 10px;
+}
+
+.itemDescripcion5 {
+    margin-top: 10px;
+}
+
+.nombre{
+    font-size: 20px;
+    text-align: center;
+}
+
+.nombreDetalle{
+
+    color: white;
+    margin-top: 5px;
+    margin-left: 20px;
+
+}
+
+.descripcion1{
+margin-top: 20px;
+text-align: left;
+}
+.controlGrupalDetalles {
+    margin-left: 21pc;
+    margin-top: -45px;
+}
+
+.agregarCompra {
+    font-size: 16px;
+    margin-top:-100pc;
+    margin-left:-21pc;
+    
+}
+
+.agregarCompra:disabled {
+    background-color: black;
+    font-size: 18px;
+    margin-top:-100pc;
+    margin-left:-21pc;
+    
+}
+.quitarCompra{
+    
+    height: 50px;
+    width: 60px;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.carroBoton {
+    padding-top: 0px;
+    padding-inline-start: 3px;
+    height: 17px;
+    width: 18px;
+    background: none;
+    background-color: transparent;
+}
+.carroBoton2 {
+    padding-top: 0px;
+    padding-inline-start: 3px;
+    height: 17px;
+    width: 18px;
+
+    background-color: gray;
+}
+
+
+.limpieCarrito{
+    background-color: gray;
+    font-size: 16px;
+    margin-top:-100pc;
+    margin-left:-21pc;
+}
+
+/*FORMATO DE PAGINA ERROR404*/
+.paginaError{
+    text-align: center;
+    font-size: 40px;
+    }

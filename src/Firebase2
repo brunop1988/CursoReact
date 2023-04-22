@@ -1,0 +1,20 @@
+import { getFirestore } from "firebase/firestore"
+import { initializeApp } from "firebase/app";
+//import { getAnalytics } from "firebase/analytics";
+
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCBCgEWhvfchD5muRe3dq0T-l4t0v5aBjk",
+  authDomain: "ecommerce-en-react-34f8f.firebaseapp.com",
+  projectId: "ecommerce-en-react-34f8f",
+  storageBucket: "ecommerce-en-react-34f8f.appspot.com",
+  messagingSenderId: "853873125667",
+  appId: "1:853873125667:web:b0d142636d679d0f84c496",
+  measurementId: "G-C6YN66FLBP"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+//const analytics = getAnalytics(app);
+export const db = getFirestore(app)
