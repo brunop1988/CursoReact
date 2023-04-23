@@ -16,16 +16,16 @@ import { Link } from "react-router-dom"
      <div className={item.class}>
             
         <img src={item.image} alt={item.name}/>
-        <ul className="caracteristicasProducto">
+        <div className="caracteristicasProducto">
              
-            <li className="nombre">
+            <p className="nombre">
                 {item.name}
-            </li>
-            <li className="descripcion1">
+            </p>
+            <p className="descripcion1">
                 {item.description1}
-            </li>
+            </p>
            
-        </ul>
+        </div>
      </div> 
      <div className="botonesGondola">
         <Link to={`/item/${item.id}`}><button className="btnDetalles">
