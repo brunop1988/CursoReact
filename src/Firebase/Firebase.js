@@ -67,6 +67,8 @@ const createOrdenCompra = async (cliente, cart, preTotal, fecha ) => {
   return ordenCompra
 }
 
+
+
 const getOrdenCompra =  async (id) => {
   const ordenCompra = await getDoc(doc(db, "orders", id))
   const item = {...ordenCompra.data(), id: ordenCompra.id}
